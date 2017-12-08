@@ -1,0 +1,20 @@
+type Foo {
+    # anam
+    id: Int
+    # babam
+    name: String
+    # dedeleri
+    bars: [Bar]
+}
+
+# Bunlar var ya bunlar hep bar
+type Bar {
+    id: Int
+    name: String
+    foo: Foo
+}
+
+type Query {
+    foo(id: Int): Foo
+    bar(id: Int): Bar
+}
